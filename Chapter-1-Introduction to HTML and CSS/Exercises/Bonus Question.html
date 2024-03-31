@@ -3,63 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML & CSS Quick Reference Guide</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HTML & CSS Playground</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #4a90e2, #2f80ed); /* Blue gradient */
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #6aa3ff; /* Blue header background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #1a66e5; /* Slightly darker blue border */
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            animation: both 1s infinite alternate;
+        }
+
+        header p {
+            font-size: 24px;
+            animation: headerPulse 2s infinite;
+        }
+
+        @keyframes headerBounce {
+            0% {
+                transform: translateY(-3px);
+            }
+            100% {
+                transform: translateY(3px);
+            }
+        }
+
+        @keyframes headerPulse {
+            0% {
+                font-size: 24px;
+            }
+            50% {
+                font-size: 26px;
+            }
+            100% {
+                font-size: 24px;
+            }
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 36px;
+            border-bottom: 3px solid #000000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        code {
+            background-color: #ffcc80;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        pre {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 20px;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .illustration {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .html-illustration {
+            width: 400px;
+        }
+
+        .css-illustration {
+            width: 300px;
+        }
+
+        .html-illustration img,
+        .css-illustration img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .html-illustration {
+            animation: floatAnimation 8s ease-in-out infinite;
+        }
+
+        .css-illustration {
+            animation: rotateAnimation 8s linear infinite;
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translate(-50%, -50%);
+            }
+            50% {
+                transform: translate(-50%, -55%);
+            }
+        }
+
+        @keyframes rotateAnimation {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>HTML & CSS Quick Reference Guide</h1>
-        <p>A handy reference for common HTML tags and CSS properties</p>
-    </header>
-    <main>
-        <section>
-            <h2>HTML Tags</h2>
-            <ul>
-                <li>
-                    <h3>&lt;div&gt;</h3>
-                    <p>Defines a division or section in an HTML document.</p>
-                    <pre><code>&lt;div&gt;
-    Content goes here
-&lt;/div&gt;</code></pre>
-                </li>
-                <li>
-                    <h3>&lt;p&gt;</h3>
-                    <p>Defines a paragraph.</p>
-                    <pre><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre>
-                </li>
-                <li>
-                    <h3>&lt;img&gt;</h3>
-                    <p>Embeds an image into the HTML document.</p>
-                    <pre><code>&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
-                </li>
-                <!-- Add more HTML tags as needed -->
-            </ul>
-        </section>
-        <section>
-            <h2>CSS Properties</h2>
-            <ul>
-                <li>
-                    <h3>color</h3>
-                    <p>Sets the color of text.</p>
-                    <pre><code>color: #333;</code></pre>
-                </li>
-                <li>
-                    <h3>font-family</h3>
-                    <p>Sets the font family for text.</p>
-                    <pre><code>font-family: Arial, sans-serif;</code></pre>
-                </li>
-                <li>
-                    <h3>background-color</h3>
-                    <p>Sets the background color of an element.</p>
-                    <pre><code>background-color: #f0f0f0;</code></pre>
-                </li>
-                <!-- Add more CSS properties as needed -->
-            </ul>
-        </section>
-        <!-- Add more sections with different headers as needed -->
-    </main>
-    <footer>
-        <p>&copy; 2024 HTML & CSS Quick Reference Guide</p>
-    </footer>
+
+<header>
+    <h1>HTML & CSS Playground</h1>
+    <p>Let's Dive into the Fun World of Web Design!</p>
+</header>
+
+<section>
+    <h2>HTML Tags</h2>
+    <ul>
+        <li>
+            <strong>&lt;h1&gt; - &lt;h6&gt;</strong>
+            <p>Header tags for different levels of headings.</p>
+            <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></pre>
+        </li>
+        <li>
+            <strong>&lt;p&gt;</strong>
+            <p>Defines a paragraph.</p>
+            <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+        </li>
+        <li>
+            <strong>&lt;ul&gt; &amp; &lt;li&gt;</strong>
+            <p>Creates an unordered list and list items.</p>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </li>
+        <li>
+            <strong>&lt;a&gt;</strong>
+            <p>Defines a hyperlink.</p>
+            <pre><code>&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</code></pre>
+        </li>
+        <li>
+            <strong>&lt;img&gt;</strong>
+            <p>Embeds an image.</p>
+            <pre><code>&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
+        </li>
+        <li>
+            <strong>&lt;div&gt;</strong>
+            <p>Defines a division or section.</p>
+            <pre><code>&lt;div&gt;Content&lt;/div&gt;</code></pre>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>CSS Properties</h2>
+    <ul>
+        <li>
+            <strong>color</strong>
+            <p>Sets the text color.</p>
+            <pre><code>color: blue;</code></pre>
+        </li>
+        <li>
+            <strong>font-size</strong>
+            <p>Sets the size of the font.</p>
+            <pre><code>font-size: 16px;</code></pre>
+        </li>
+        <li>
+            <strong>background-color</strong>
+            <p>Sets the background color.</p>
+            <pre><code>background-color: #f0f0f0;</code></pre>
+        </li>
+        <li>
+            <strong>margin</strong>
+            <p>Sets the margin space around an element.</p>
+            <pre><code>margin: 10px;</code></pre>
+        </li>
+        <li>
+            <strong>padding</strong>
+            <p>Sets the padding space around an element's content.</p>
+            <pre><code>padding: 5px;</code></pre>
+        </li>
+        <li>
+            <strong>border</strong>
+            <p>Sets the border around an element.</p>
+            <pre><code>border: 1px solid black;</code></pre>
+        </li>
+        <li>
+            <strong>text-align</strong>
+            <p>Sets the alignment of text.</p>
+            <pre><code>text-align: center;</code></pre>
+        </li>
+        <li>
+            <strong>display</strong>
+            <p>Defines how an element is displayed.</p>
+            <pre><code>display: block;</code></pre>
+        </li>
+    </ul>
+</section>
+
 </body>
 </html>
